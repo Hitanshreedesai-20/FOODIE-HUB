@@ -76,3 +76,12 @@ function removeItem(index) {
 
 // Update cart count on page load
 document.addEventListener("DOMContentLoaded", updateCartCount);
+function proceedToPayment() {
+  const total = cart.reduce((sum, item) => sum + item.qty * item.price, 0);
+  if (total === 0) {
+    alert("Your cart is empty. Please add items before proceeding to payment.");
+  } else {
+    alert(`Proceeding to payment of ₹${total}. This is a demo.`);
+    // Simulate redirect: window.location.href = 'payment.html';
+  }
+}

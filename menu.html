@@ -1,147 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foodie Hub</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foodie Hub | Menu</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
 
-    <!-- Header with centered logo -->
-    <header class="main-header">
-        <div class="logo-container">
-            <img src="images/foodie-paglu-logo.png" alt="Foodie Paglu Logo">
-            <h1 class="brand-name">FOODIE HUB</h1>
-            <p class="slogan">SINCE 2025</p>
-        </div>
-        <br>
-        <nav class="main-nav">
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="offers.html">Offers</a>
-            <a href="#contact">Contact</a>
-            <div class="cart" onclick="openCart()">🛒 Cart: <span id="cart-count">0
-                
-            </span></div>
-        </nav>
-    </header>
-    <!-- Food Menu -->
-    <section class="menu" id="menu">
-        <h2>Our Main Menu </h2>
-        <div class="menu-container">
-            <!-- Sample Items -->
-            <div class="card">
-                <img src="images/pizza.jpg" alt="Pizza">
-                <h3>Pizza</h3>
-                <p>₹199</p>
-                <p class="rating">⭐ 4.5</p>
-                <button onclick="addToCart('Pizza', 199, 'images/pizza.jpg')">Add to Cart</button>
-            </div>
-            <div class="card">
-                <img src="images/burger.jpg" alt="Burger">
-                <h3>Burger</h3>
-                <p>₹129</p>
-                <p class="rating">⭐ 4.2</p>
-                <button onclick="addToCart('Burger', 129, 'images/burger.jpg')">Add to Cart</button>
-            </div>
-
-            <!-- New Items Below -->
-
-            <div class="card">
-                <img src="images/veg-momo.jpg" alt="Momos">
-                <h3>Veg Momos</h3>
-                <p>₹99</p>
-                <p class="rating">⭐ 4.3</p>
-                <button onclick="addToCart('Veg Momos', 99, 'images/veg-momo.jpg' )">Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="images/noodles.jpg" alt="Noodles">
-                <h3>Schezwan Noodles</h3>
-                <p>₹149</p>
-                <p class="rating">⭐ 4.4</p>
-                <button onclick="addToCart('Schezwan Noodles', 149, 'images/noodles.jpg')">Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="images/biryani.jpg" alt="Biryani">
-                <h3>Chicken Biryani</h3>
-                <p>₹229</p>
-                <p class="rating">⭐ 4.6</p>
-                <button onclick="addToCart('Chicken Biryani', 229, 'images/biryani.jpg')">Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="images/panner-tikka.jpg" alt="Paneer Tikka">
-                <h3>Paneer Tikka</h3>
-                <p>₹179</p>
-                <p class="rating">⭐ 4.5</p>
-                <button onclick="addToCart('Paneer Tikka', 179, 'images/panner-tikka.jpg')">Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="images/dosa.jpg" alt="Dosa">
-                <h3>Masala Dosa</h3>
-                <p>₹129</p>
-                <p class="rating">⭐ 4.2</p>
-                <button onclick="addToCart('Masala Dosa', 129, 'images/dosa.jpg')">Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="images/samosa.jpg" alt="Samosa">
-                <h3>Samosa</h3>
-                <p>₹30</p>
-                <p class="rating">⭐ 4.0</p>
-                <button onclick="addToCart('Samosa', 30, 'images/samosa.jpg')">Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="images/gulab-jambu.jpg" alt="Gulab Jamun">
-                <h3>Gulab Jamun</h3>
-                <p>₹60</p>
-                <p class="rating">⭐ 4.8</p>
-                <button onclick="addToCart('Gulab Jamun', 60, 'images/gulab-jambu.jpg')">Add to Cart</button>
-            </div>
-
-            <div class="card">
-                <img src="images/choco-ic.jpg" alt="Chocolate Ice Cream">
-                <h3>Choco Ice Cream</h3>
-                <p>₹80</p>
-                <p class="rating">⭐ 4.7</p>
-                <button onclick="addToCart('Choco Ice Cream', 80, 'images/choco-ic.jpg')">Add to Cart</button>
-            </div>
-           
-
-            <div class="card">
-                <img src="images/sb-milkshake.jpg" alt="Milkshake">
-                <h3>Strawberry Milkshake</h3>
-                <p>₹110</p>
-                <p class="rating">⭐ 4.5</p>
-                <button onclick="addToCart('Strawberry Milkshake', 110, 'images/sb-milkshake.jpg')">Add to Cart</button>
-            </div>
-            
-            <!-- Add more cards as before -->
-        </div>
-    </section>
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Foodie Hub. All rights reserved.</p>
-    </footer>
-
-    <!-- Cart Modal -->
-    <div id="cart-modal" class="cart-modal hidden">
-        <div class="cart-content">
-            <h2>Your Cart</h2>
-            <ul id="cart-items"></ul>
-            <p>Total: ₹<span id="cart-total">0</span></p>
-            <button onclick="closeCart()" class="close-btn">Close</button>
-        </div>
+  <!-- Header -->
+  <header class="main-header">
+    <div class="logo-container">
+      <img src="images/foodie-hub-logo.jpg" alt="Foodie Hub Logo">
+      <h1 class="brand-name">FOODIE HUB</h1>
+      <p class="slogan">Delighting Taste Buds Since 2025</p>
     </div>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="#contact">Contact</a>
+      <button class="cart" onclick="openCart()">🛒 Cart: <span id="cart-count">0</span></button>
+    </nav>
+  </header>
 
-    <script src="script.js"></script>
+  <!-- Menu Section -->
+  <section class="menu" id="menu">
+    <h1>Our Full Menu</h1>
+<br>
+    <!-- Starters -->
+    <h2>Starters</h2><br>
+    <div class="menu-container">
+      <div class="card">
+        <img src="images/samosa.jpg" alt="Samosa">
+        <h3>Samosa</h3>
+        <p>₹30</p>
+        <p class="rating">⭐ 4.0</p>
+        <button onclick="addToCart('Samosa', 30, 'images/samosa.jpg')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="images/veg-momo.jpg" alt="Veg Momos">
+        <h3>Veg Momos</h3>
+        <p>₹99</p>
+        <p class="rating">⭐ 4.3</p>
+        <button onclick="addToCart('Veg Momos', 99, 'images/veg-momo.jpg')">Add to Cart</button>
+      </div>
+    </div><br>
+
+    <!-- Main Course -->
+    <h2>Main Course</h2><br>
+    <div class="menu-container">
+      <div class="card">
+        <img src="images/pizza.jpg" alt="Pizza">
+        <h3>Pizza</h3>
+        <p>₹199</p>
+        <p class="rating">⭐ 4.5</p>
+        <button onclick="addToCart('Pizza', 199, 'images/pizza.jpg')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="images/burger.jpg" alt="Burger">
+        <h3>Burger</h3>
+        <p>₹129</p>
+        <p class="rating">⭐ 4.2</p>
+        <button onclick="addToCart('Burger', 129, 'images/burger.jpg')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="images/biryani.jpg" alt="Chicken Biryani">
+        <h3>Chicken Biryani</h3>
+        <p>₹229</p>
+        <p class="rating">⭐ 4.6</p>
+        <button onclick="addToCart('Chicken Biryani', 229, 'images/biryani.jpg')">Add to Cart</button>
+      </div>
+      
+      <div class="card">
+        <img src="images/noodles.jpg" alt="Noodles">
+        <h3>Schezwan Noodles</h3>
+        <p>₹149</p>
+        <p class="rating">⭐ 4.4</p>
+        <button onclick="addToCart('Schezwan Noodles', 149, 'images/noodles.jpg')">Add to Cart</button>
+      </div>
+      <div class="menu-container1">
+      <div class="card">
+        <img src="images/dosa.jpg" alt="Masala Dosa">
+        <h3>Masala Dosa</h3>
+        <p>₹129</p>
+        <p class="rating">⭐ 4.2</p>
+        <button onclick="addToCart('Masala Dosa', 129, 'images/dosa.jpg')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="images/panner-tikka.jpg" alt="Paneer Tikka">
+        <h3>Paneer Tikka</h3>
+        <p>₹179</p>
+        <p class="rating">⭐ 4.5</p>
+        <button onclick="addToCart('Paneer Tikka', 179, 'images/panner-tikka.jpg')">Add to Cart</button>
+      </div>
+    </div>
+</div><br>
+    <!-- Desserts & Beverages -->
+    <h2>Desserts & Beverages</h2><br>
+    <div class="menu-container">
+      <div class="card">
+        <img src="images/gulab-jambu.jpg" alt="Gulab Jamun">
+        <h3>Gulab Jamun</h3>
+        <p>₹60</p>
+        <p class="rating">⭐ 4.8</p>
+        <button onclick="addToCart('Gulab Jamun', 60, 'images/gulab-jambu.jpg')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="images/choco-ic.jpg" alt="Chocolate Ice Cream">
+        <h3>Choco Ice Cream</h3>
+        <p>₹80</p>
+        <p class="rating">⭐ 4.7</p>
+        <button onclick="addToCart('Choco Ice Cream', 80, 'images/choco-ic.jpg')">Add to Cart</button>
+      </div>
+      <div class="card">
+        <img src="images/sb-milkshake.jpg" alt="Strawberry Milkshake">
+        <h3>Strawberry Milkshake</h3>
+        <p>₹110</p>
+        <p class="rating">⭐ 4.5</p>
+        <button onclick="addToCart('Strawberry Milkshake', 110, 'images/sb-milkshake.jpg')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@foodiehub.com | Phone: +91 98765 43210</p>
+    <p>Address: 123 Food Street, Mumbai, India</p>
+  </section>
+
+    <p>&copy; 2025 Foodie Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- Cart Modal -->
+  <div id="cart-modal" class="cart-modal hidden">
+    <div class="cart-content">
+      <h2>Your Cart</h2>
+      <ul id="cart-items"></ul>
+      <p>Total: ₹<span id="cart-total">0</span></p>
+      
+      <button onclick="proceedToPayment()" class="pay-btn">Proceed to Payment</button>
+
+      <button onclick="closeCart()" class="close-btn">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
 </html>

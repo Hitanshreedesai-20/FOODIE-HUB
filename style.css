@@ -65,9 +65,9 @@ body {
 
 /* Hero Section */
 .hero {
-    background: url('images/hero-bg.jpg') no-repeat center center/cover;
+    background: url('images/bg.jpg') no-repeat center center/cover;
     padding: 100px 20px;
-    color: black;
+    color: whitesmoke;
     text-align: center;
 }
 
@@ -144,7 +144,24 @@ body {
     flex-wrap: wrap;
     gap: 20px;
 }
-
+.menu-container1 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.menu-container3 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.menu-container2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 .card {
     background: white;
     border: 1px solid #ddd;
@@ -376,4 +393,57 @@ footer {
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 10px;
+}
+/* Nav Container - clean, no box */
+.main-nav {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 2rem;
+  background: transparent; /* no white box */
+  box-shadow: none;        /* remove shadow */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Nav Links */
+.main-nav a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  text-decoration: underline;
+}
+
+.main-nav a:hover {
+  color: #d45982;
+}
+
+/* Cart Button */
+.cart {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cart:hover {
+  background-color: #d45982;
+}
+
+/* Responsive: Stack on small screens */
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
 }
